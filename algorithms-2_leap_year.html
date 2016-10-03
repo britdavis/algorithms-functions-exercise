@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		/* provide years for testing
+		 * see if divisible by 4; if yes: 
+		 * 	divisible by 100 then it is not, except if
+		 *  it is also divisible by and then 400
+		 * if not both, then not leap years.
+		 */
+
+	var years = [2000, 1900, 2016];
+	var LY = false
+
+	for (var i=0, max=years.length; i < max; i++) {
+		if (years[i] % 400 === 0) {
+			LY = true;
+			console.log(years[i] + " is a leap year")
+			;
+		} else if (years[i] % 4 === 0 && years[i] % 100 !== 0) {
+			console.log(years[i] + " is also leap year");
+			LY = true
+		} else
+			console.log(years[i] + " is NOT a leap year");
+	}
+
+
+	</script>
+</body>
+</html>

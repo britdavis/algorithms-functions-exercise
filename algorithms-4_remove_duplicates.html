@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- Write a function which takes an array of integers and returns an array with any duplicate integers removed.
+[1,1,2,3,1,2,3] -> [1,2,3]
+[1,4,4,4,2,2,4,4,4] -> [1,4,2] -->
+
+<html>
+<head>
+	<title>Remove Duplicates</title>
+</head>
+<body>
+	<script>
+
+	/*	* create new arrDeDup = []
+		* push arr[0] into arrDeDup.
+		* loop through arr[n] and check arrDeDup[n] for exist.
+		* if exist, next n. If not, push arr[n] into arrDeDup
+	*/
+		// var arr = [1,1,2,3,1,2,3];
+		var arr = [1,4,4,4,2,2,4,4,4]
+		var arrDeDup = [];
+
+		function deDup(arr) {
+			// for (var i = 0, max = arr.length ; i < max ; i++) {
+				// if arr[i]
+			for(var i in arr) {
+				if(arrDeDup.indexOf(arr[i]) === -1) {
+					arrDeDup.push(arr[i]);
+				}
+			}
+			console.log(arrDeDup);
+			return arrDeDup; // console vs return ???
+		}
+
+		deDup(arr)
+	</script>
+</body>
+</html>
+
+
+
+<!-- *** from stackoverflow
+var names = ["Alex","Tony","James","Suzane", "Marie", "Laurence", "Alex", "Suzane", "Marie", "Marie", "James", "Tony", "Alex"];
+var uniqueNames = [];
+
+    for(var i in names){
+        if(uniqueNames.indexOf(names[i]) === -1){
+            uniqueNames.push(names[i]);
+        }
+    }
+ -->

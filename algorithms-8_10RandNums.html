@@ -1,0 +1,33 @@
+<!-- Write a function which takes no input and returns an array of 10 distinct randomly generated integers between 1 and 100.
+
+-> [48, 5, 32, 2, 10, 11, 34, 95, 82, 93] (good!)
+-> [1, 1, 24, 63, 45, 84, 17, 11, 59, 13] (bad - duplicated number)
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>10 Random Numbers</title>
+</head>
+<body>
+	<script>
+	var min = 1;
+	var max = 100;
+	var arrRandom = [];
+	var arrQty = 10;
+
+	function randUnique () {			
+		while (arrRandom.length < arrQty) {
+			var rn = Math.floor(Math.random() * (max - min) + 1);
+			console.log(rn);			
+			if(arrRandom.indexOf(rn) === -1) {
+					arrRandom.push(rn);
+			} 			
+		}
+	}	
+	randUnique();
+	console.log(arrRandom);
+	console.log(arrRandom.length);
+	// still unclear on use of return vs console.log
+	</script>
+</body>
+</html>
