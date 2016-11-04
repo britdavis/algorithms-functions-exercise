@@ -1,0 +1,14 @@
+Node is all callbacks
+
+we need more callback practice
+
+New, this: coming later today.
+
+anytime you pass a function as a parameter, it's probably a callback.
+ one example not is 
+ 	var arr = [1,2,3]
+
+Leap Years are any year
+that can be evenly divided by 4 (such as 2012, 2016, etc)
+ 	except if it can be evenly divided by 100, then it isn't (such as 2100, 2200, etc)
+ 	 	except if it can be evenly divided by 400, then it is (such as 2000, 2400) 	

@@ -1,0 +1,110 @@
+<!-- Your competitor, MovieCo, has an open API which allows you to see their last 10,000 rentals. In order to get a competitive advantage, your job is to write some code to analyze that data and spot trends.
+
+The API is available at two endpoints:
+
+* http://159.203.175.239:9001/movies.txt
+
+Contains all of the movies in the format
+
+	ID Title (Year)
+
+Example
+
+	111 Good Will Hunting (1997)
+
+	(The movie "Good Will Hunting" from 1997 has id 111)
+
+* http://159.203.175.239:9001/checkouts.txt
+
+Contains the last 12 months of checkouts in the format
+
+	userID Month MovieID
+
+Example
+
+	user95 jun 83
+
+	(The user #95 checked out movie #83 in June)
+
+	Each record in checkouts.txt records one instance of one movie being checked out by one user.
+
+Your job is to write code to answer the following questions:
+
+1. What user(s) had the most checkouts?
+
+2. What month(s) had the most checkouts?
+
+3. What is the title of the movie(s) that was the most checked out?
+
+ /* "\n" is newline
+ -->
+
+
+
+
+
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>Movie Thing</title>
+ 	<script src="http://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+ </head>
+ <body>
+ 	<script>
+ 		$.get("http://159.203.175.239:9001/checkouts.txt", function(res) { 	
+ 		var arr = res.split("\n");
+ 		var arr2 = [];
+ 		var arr3 = [];
+ 		for (var i = 0; i < arr.length; i++){
+ 			arr2.push(arr[i].split(" "));
+ 			}
+ 		for (var j = 0; j < arr.length; j = j +3) {
+ 			// if (arr3.indexOf(arr2[j][0]) === -1) {
+ 				arr3.push(arr2[j][0]);
+ 			// }
+ 		
+
+ 		}
+ 			console.log(arr3.sort());
+ 			var counts = [];
+
+
+// 			//count the numbers in arr, into counts
+// 			for (k = 0; k < arr3.length; k++) {
+// 				if (counts[arr3[i]] === undefined) {
+// 					counts[arr3[i]] = 0;
+// 		}
+// 		counts[arr3[i]] = counts[arr3[i]] + 1;
+
+
+// 			//find the max number in the counts array
+// 			var m;
+// 			var maxnum;
+// 	for (m = 0; m < counts.length; m++) {
+// 		if (counts[m] > maxcount) {
+// 			maxcount = counts[m];
+// 			maxnum = m;
+// 		}
+// 		console.log(maxnum);
+// 	}
+
+// 	return maxnum;
+// }
+
+
+ 	})
+
+ 	</script>
+ </body>
+ </html>
+
+
+<!-- arrDeDup.push(arr[i]); 
+
+if(arrRandom.indexOf(rn) === -1) {
+					arrRandom.push(rn);
+
+-->
+
+
+

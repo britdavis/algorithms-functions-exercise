@@ -1,3 +1,9 @@
+<!-- 9. Write a function which takes two sorted lists and merges them into a new sorted list.
+
+[1,2,5,6,9], [3,4,5,10] -> [1,2,3,4,5,5,6,9,10]
+[], [] -> []
+[-1, 0, 1], [-2, 2] -> [-2, -1, 0, 1, 2] -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,8 +11,23 @@
 </head>
 <body>
 	<script>
+	var arrA = [[1,2,5,6,9],[3,4,5,10]];
+	var arrB = [[],[]];
+	var arrC = [[-1,0,1],[-2,2]];
 
+	arrMerge = arrC[0].concat(arrC[1]).sort(function(a,b){
+		return(a-b);
+	});
 
+	console.log(arrMerge);
+
+	// var arr1 = [1,2,5,6,9];
+	// var arr2 = [3,4,5,10];
+	// arr3 = arr2.concat(arr1).sort(function(a,b){
+	// 	return(a-b);
+	// });
+
+	// console.log(arr3);
 
 	</script>
 </body>

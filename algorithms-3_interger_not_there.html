@@ -11,24 +11,24 @@
 <body>
 	<script>
 		// how do i prompt for an array?
-		var arr = [1,2,5];
-		// var arr = [1,2,3,4,5];
-		// var arr = [3,4,5];
+		var arr = prompt("enter an array");
+		arr = arr.split(",").map(Number);
 
-		function myfunction(array) {
-			for (var i = 0, max = arr.length ; i <= max ; i++) {
-				// console.log(i);
-				// console.log(arr.length);
-					// if (arr[i] -1 !== arr[i]) {
-						if (arr[i] !== i + 1) {
+		console.log(arr);
+		// var arr = [1,2,5];
+		// var arr = [1,2,3,4,5];
+		// var arr2 = [3,4,5];
+
+		function myfunction(myarray) {
+			for (var i = 0; i <= myarray.length ; i++) {
+						if (myarray[i] !== i + 1) {
 						console.log(i + 1);
 						return i + 1;
 					}
 				}	
 			}
-	
-		console.log(arr);
-		myfunction(arr);
+			myfunction(arr);
+			// myfunction(arr2);
 
 	</script>
 </body>

@@ -1,0 +1,45 @@
+<!-- 		5. Write function that translates a text to Pig Latin and back. English is translated to Pig Latin by taking the first letter of every word, moving it to the end of the word and adding "ay".
+		"The quick brown fox" -> "Hetay uickqay rownbay oxfay".
+		(source: https://adriann.github.io/programming_problems.html)
+		take position 0 of array, pop it off
+		create new array with rest of word (sliced or spliced), add popped off letter and add "ay" -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pig Latin</title>
+</head>
+<body>
+
+<script>
+		// var Eng_to_PL = "Hello Brit";
+		var Eng_to_PL = prompt("Enter a phrase to translate into Pig Latin");
+		
+		var i, j;
+
+		var arrEngtoPL = Eng_to_PL.split(" ");
+		var sWords = [];
+		for (i = 0; i < arrEngtoPL.length; i++) {
+			sWords[i] = arrEngtoPL[i].split("");
+		}
+		var arrPL = [];
+		var fLett = "";
+		// function createPL() {
+			for (j = 0; j < arrEngtoPL.length; j++) {
+				fLett = sWords[j][0];
+				sWords[j].shift();
+				sWords[j].push(fLett);
+				sWords[j].push("a");
+				sWords[j].push("y");
+				sWords[j] = sWords[j].join("");
+			
+		// }
+	}
+		console.log(arrEngtoPL);
+		alert(sWords.join(" "));
+		// alert(createPL);
+		// alert(Eng_to_PL);
+		
+</script>
+
+</body>
+</html>

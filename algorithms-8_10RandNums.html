@@ -10,23 +10,27 @@
 </head>
 <body>
 	<script>
-	var min = 1;
-	var max = 100;
-	var arrRandom = [];
-	var arrQty = 10;
 
-	function randUnique () {			
+
+	function randUnique () {
+		var min = 1;
+		var max = 100;
+		var arrRandom = [];
+		var arrQty = 10;
+
 		while (arrRandom.length < arrQty) {
 			var rn = Math.floor(Math.random() * (max - min) + 1);
-			console.log(rn);			
+			// console.log(rn);			
 			if(arrRandom.indexOf(rn) === -1) {
 					arrRandom.push(rn);
 			} 			
 		}
-	}	
-	randUnique();
-	console.log(arrRandom);
-	console.log(arrRandom.length);
+		return arrRandom;
+	}
+
+	console.log(randUnique());
+	// console.log(arrRandom);
+	// console.log(arrRandom.length);
 	// still unclear on use of return vs console.log
 	</script>
 </body>
